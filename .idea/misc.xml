@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Workspace/Android/Android-Global-Kit/app/src/main/res/layout/activity_global.xml" value="0.33645833333333336" />
+        <entry key="..\:/Workspace/Android/Android-Global-Kit/app/src/main/res/layout/activity_image.xml" value="0.3223958333333333" />
         <entry key="..\:/Workspace/Android/Android-Global-Kit/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Workspace/Android/Android-Global-Kit/app/src/main/res/layout/activity_pixel.xml" value="0.33645833333333336" />
       </map>
     </option>
   </component>
