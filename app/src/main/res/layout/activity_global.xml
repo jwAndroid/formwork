@@ -5,14 +5,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#448AFF">
+        android:background="#448AFF"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/tvText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Wellcome Jw Modern Android!"
-            android:gravity="center"
             android:textColor="#fff"/>
 
     </LinearLayout>

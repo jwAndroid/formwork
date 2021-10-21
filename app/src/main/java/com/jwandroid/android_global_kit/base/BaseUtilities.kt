@@ -11,7 +11,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
-import timber.log.Timber
 
 sealed class UtilityBase{
     open class BaseFragment<T: ViewDataBinding>(@LayoutRes val layoutRes: Int) : Fragment(){

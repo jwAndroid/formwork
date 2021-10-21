@@ -1,7 +1,11 @@
 package com.jwandroid.android_global_kit
 
+import android.content.Intent
+import com.jwandroid.android_global_kit.application.rx.RxBus
 import com.jwandroid.android_global_kit.base.UtilityBase
 import com.jwandroid.android_global_kit.databinding.ActivityGlobalBinding
+import com.jwandroid.android_global_kit.network.entity.RxTestEntity
+import com.jwandroid.android_global_kit.utils.LogUtils
 import com.jwandroid.android_global_kit.view.PixelActivity
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -11,8 +15,22 @@ class GlobalActivity : UtilityBase.BaseAppCompatActivity<ActivityGlobalBinding>(
     override fun ActivityGlobalBinding.onCreate() {
 
         GlobalScope.launch {
-            delay(2000L)
+            delay(1000L)
             PixelActivity.run(this@GlobalActivity)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        RxBus.subscribe(RxBus.EVENT, this) {
+            if (it is RxTestEntity) {
+                LogUtils.logD("JwAndroidRx", "in GlobalActivity result: $it")
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        RxBus.unregister(this)
     }
 }
