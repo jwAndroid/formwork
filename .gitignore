@@ -90,4 +90,4 @@ lint/tmp/
 /app/build.gradle
 
 # apiKey
-/app/src/main/res/values/
+/app/src/main/res/values/apikey.xml
